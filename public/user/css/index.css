@@ -1,0 +1,98 @@
+.nav {
+  width: 100%;
+  padding: 10px;
+}
+.nav ul li {
+  width: 33.33%;
+  float: left;
+}
+.nav ul li img {
+  width: 100%;
+  display: block;
+}
+.brand {
+  width: 100%;
+  padding: 0 10px;
+}
+.brand .title {
+  width: 100%;
+  display: block;
+}
+.brand .title img {
+  width: 100%;
+  display: block;
+}
+.brand ul {
+  padding: 10px 0;
+  overflow: hidden;
+}
+.brand ul li {
+  width: 25%;
+  float: left;
+}
+.brand ul li img {
+  width: 100%;
+}
+.product {
+  width: 100%;
+  padding: 0 10px;
+}
+.product a {
+  display: block;
+  width: 100%;
+}
+.product a img {
+  width: 100%;
+}
+.product ul {
+  padding: 6px 0 ;
+  overflow: hidden;
+}
+.product ul li {
+  width: 50%;
+  float: left;
+  padding: 5px;
+  list-style: none;
+}
+.product ul li a {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  box-shadow: 0 0 5px #ccc;
+}
+.product ul li a img {
+  width: 100%;
+  display: block;
+}
+.product ul li a .name {
+  display: block;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  color: #8f8f94;
+  overflow: hidden;
+}
+.product ul li a p {
+  text-align: center;
+}
+.product ul li a p span:first-of-type {
+  margin-right: 2px;
+  color: red;
+}
+.product ul li a p span:last-of-type {
+  margin-left: 2px;
+  text-decoration: line-through;
+}
+.product ul li a .buy-now {
+  display: block;
+  text-align: center;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #006699;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 0 auto 5px auto;
+  color: #fff;
+}
