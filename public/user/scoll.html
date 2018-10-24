@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
@@ -9,7 +8,10 @@
 	<link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.css">
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="./css/scoll.css">
+	<script src="assets/zepto/zepto.min.js"></script>
+	<script src="./assets/art-template/template-web.js"></script>
 	<script src="assets/mui/js/mui.min.js"></script>
+	<script src="./js/scoll.js"></script>
 </head>
 
 <body>
@@ -38,87 +40,41 @@
 	<div class="iscoll">
 		<div class="left">
 			<div class="mui-scroll-wrapper">
-				<div class="mui-scroll">
-					111<br/>
-					111<br/>
-					111<br/>
-					111<br/>
-					111<br/>111<br/>
-					111<br/>
-					111<br/>
-					111<br/>
-					111<br/>
+				<div class="mui-scroll mui-color">
+						<div class="lintin">
 
-					111<br/>111<br/>111<br/>111<br/>
-
-					111<br/>
-
-					111<br/>
-					111<br/>
-
-
-					111<br/>111<br/>
-					111<br/>
-					111<br/>
-
-					111<br/>
-					111<br/>
-					111<br/>
-
-
-					111<br/>
-					111<br/>111<br/>111<br/>
-					111<br/>
-					111<br/>
-					111<br/>
-
-
-
+						</div>
 				</div>
 			</div>
 		</div>
 		<div class="right">
-				<div class="mui-scroll-wrapper">
-						<div class="mui-scroll">
-							111<br/>
-							111<br/>
-							111<br/>
-							111<br/>
-							111<br/>111<br/>
-							111<br/>
-							111<br/>
-							111<br/>
-							111<br/>
-		
-							111<br/>111<br/>111<br/>111<br/>
-		
-							111<br/>
-		
-							111<br/>
-							111<br/>
-		
-		
-							111<br/>111<br/>
-							111<br/>
-							111<br/>
-		
-							111<br/>
-							111<br/>
-							111<br/>
-		
-		
-							111<br/>
-							111<br/>111<br/>111<br/>
-							111<br/>
-							111<br/>
-							111<br/>
-		
-		
-		
-						</div>
-					</div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="hell mui-clearfix">
+						
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
+	<script type="text/template" id="scoll-tem">
+		{{each rows}}
+			<a href="javascript:;" class="links" data-id="{{$value["id"]}}">{{$value['categoryName']}}</a>
+		{{/each}}
+	</script>
+	<script type="text/template" id="show">
+		{{each rows}}
+			<li>
+				<a href="javascript:;">
+					<img src="{{$value["brandLogo"]}}" alt="">
+					<p>{{$value["brandName"]}}</p>
+				</a>
+			</li>
+		{{/each}}
+		
+		<%if(!rows.length){ %>
+			<div>暂无数据</div>
+		   <% } %>
+	</script>
 </body>
-<script src="js/banner.js"></script>
 </html>
