@@ -1,0 +1,82 @@
+.hell {
+  background-color: #fff;
+  padding-top: 10px;
+}
+.filter {
+  width: 100%;
+  padding: 0 15px;
+}
+.filter .mui-col-xs-6 {
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+  text-align: center;
+  background: #efeff4;
+}
+.filter .mui-icon {
+  font-size: 12px;
+}
+.product {
+  width: 100%;
+  padding: 0 10px;
+  background-color: #fff;
+}
+.product a {
+  display: block;
+  width: 100%;
+}
+.product a img {
+  width: 100%;
+}
+.product ul {
+  padding: 6px 0 ;
+  overflow: hidden;
+}
+.product ul li {
+  width: 50%;
+  float: left;
+  padding: 5px;
+  list-style: none;
+}
+.product ul li a {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  box-shadow: 0 0 5px #ccc;
+}
+.product ul li a img {
+  width: 100%;
+  display: block;
+}
+.product ul li a .name {
+  display: block;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  color: #8f8f94;
+  overflow: hidden;
+}
+.product ul li a p {
+  text-align: center;
+}
+.product ul li a p span:first-of-type {
+  margin-right: 2px;
+  color: red;
+}
+.product ul li a p span:last-of-type {
+  margin-left: 2px;
+  text-decoration: line-through;
+}
+.product ul li a .buy-now {
+  display: block;
+  text-align: center;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #006699;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 0 auto 5px auto;
+  color: #fff;
+}

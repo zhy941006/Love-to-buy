@@ -1,0 +1,28 @@
+<!DOCTYOE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<title>鼠标悬停图片变大</title>
+<style type="text/css">
+body{text-align:center; background:#72C2E7;}
+h1{font-size:20px; color:#fff; text-shadow: #272229 2px 2px 4px; font-family:"微软雅黑";}
+#gallery ul{margin-left:30px;margin-top:5em;} 
+#gallery ul li{ list-style:none; display:inline-table; padding:10px;}
+#gallery ul li #pic{-webkit-transition:all 0.3s ease-in-out;opacity:0;visibility:hidden;position:absolute;margin-top:-32px;margin-left:-300px;border:4px solid white;
+box-shadow:#272229 2px 2px 10px; }
+#gallery ul li #mini:hover{ cursor:pointer;}
+#gallery ul li:hover #pic{width:400px;height:128px; opacity:1; visibility:visible; float:right;}
+</style>
+</head>
+<body> 
+<div id="Gallery"> 
+<ul>
+<li><img src="images/active1.png" id="mini"><img src="images/active1.png.png" id="pic"><li>
+<li><img src="images/active1.png" id="mini"><img src="images/active1.png" id="pic"><li> 
+<li><img src="images/active1.png" id="mini"><img src="images/active1.png" id="pic"><li> 
+<li><img src="images/active1.png" id="mini"><img src="images/active1.png" id="pic"><li> 
+</ul>
+</div>
+<body>
+</html>
