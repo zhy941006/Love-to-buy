@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="assets/mui/css/mui.min.css">
+	<link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/shping.css">
+	<script src="assets/mui/js/mui.min.js"></script>
+	<script src="assets/zepto/zepto.min.js"></script>
+	<script src="assets/art-template/template-web.js"></script>
+	<script src="js/pick.js"></script>
+	<script src="js/palck.js"></script>
+	<script src="js/shping.js"></script>
+</head>
+
+<body>
+	<header class="mui-bar mui-bar-nav my-header">
+		<h1 class="mui-title">爱去买</h1>
+		<a class="mui-icon mui-icon-search mui-pull-right" href="search.html"></a>
+	</header>
+	<nav class="mui-bar mui-bar-tab my-footer">
+		<a class="mui-tab-item mui-active" href="index.html">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="scoll.html">
+			<span class="mui-icon mui-icon-bars"></span>
+			<span class="mui-tab-label">分类</span>
+		</a>
+		<a class="mui-tab-item" href="cart.html">
+			<span class="mui-icon fa fa-shopping-cart"></span>
+			<span class="mui-tab-label">购物车</span>
+		</a>
+		<a class="mui-tab-item" href="user.html">
+			<span class="mui-icon mui-icon-person"></span>
+			<span class="mui-tab-label">会员中心</span>
+		</a>
+	</nav>
+	<div class="mui-play">
+		<div class="mui-slider">
+			<div class="mui-slider-group mui-slider-loop">
+
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="images/banner5.png" alt="">
+					</a>
+				</div>
+
+			</div>
+		</div>
+		<div class="header">
+			<!-- <div class="introduce ">
+				【莹恋】MIZUNO美津V1GA159002乒乓球男鞋室内综合训练鞋
+			</div>
+			<div class="well">
+				价格:
+				<span>￥112</span>
+				<i>￥342</i>
+			</div>
+			<div class="size">
+				<span>数量:</span>
+				<span class="active">35</span>
+				<span>36</span>
+				<span>37</span>
+				<span>38</span>
+				<span>39</span>
+				<span>40</span>
+				<span>41</span>
+				<span>42</span>
+				<span>43</span>
+				<span>44</span>
+				<span>45</span>
+				<span>46</span>
+				<span>47</span>
+				<span>48</span>
+				<span>49</span>
+				<span>50</span>
+				<span>51</span>
+				<span>52</span>
+				<span>53</span>
+				<span>54</span>
+				<span>55</span>
+				<span>56</span>
+			</div>
+			<div class="mun">
+				<div class="mui-pull-left">数量:</div>
+				<div class="mui-pull-left selectNum">
+					<span>+</span>
+					<input type="text" value="0">
+					<span>-</span>
+				</div>
+				<div class="mui-pull-left">剩余：44件</div>
+			</div>
+			<div class="botton">
+				<div class="botton-l">查看购物车</div>
+				<div class="botton-r">加入购物车</div>
+			</div> -->
+		</div>
+	</div>
+	<script type="text/template" id="shping">
+		<div class="introduce ">
+				<%=proName%>
+			</div>
+			<div class="well">
+				价格:
+				<span>￥<%=price%></span>
+				<i>￥<%=oldPrice%>></i>
+			</div>
+			<div class="size">
+				数量:
+				<%var size=size.split("-")%>
+				<%for (var i=size[0];i<=size[1];i++) {%>
+				<span><%=i%></span>
+				<%}%>
+			</div>
+			<div class="mun">
+				<div class="mui-pull-left">尺码:</div>
+				<div class="mui-pull-left selectNum">
+					<span id="l">+</span>
+					<input type="text" value="1">
+					<span id="r">-</span>
+				</div>
+				<div class="mui-pull-left mui">剩余：<span class="six"><%=num%></span>件</div>
+			</div>
+			<div class="botton">
+				<div class="botton-l">查看购物车</div>
+				<div class="botton-r">加入购物车</div>
+			</div>
+	</script>
+</body>
+
+</html>
