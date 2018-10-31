@@ -39,6 +39,7 @@ html {
 .iscoll .right ul li {
   width: 33.33%;
   float: left;
+  text-align: center;
 }
 .iscoll .right ul li img {
   display: block;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>乐淘-用户管理</title>
@@ -8,10 +9,11 @@
 	<link rel="stylesheet" href="css/system.css">
 	<script src="assets/jquery/jquery.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-	<script src="assets/artTemplate/template-native.js"></script>
-	<script src="js/common.js"></script>
-	<script src="js/user.js"></script>
+	<script src="./assets/artTemplate/template.js"></script>
+	<script src="./js/common.js"></script>
+	<script src="./js/user.js"></script>
 </head>
+
 <body>
 	<div class="system">
 		<div class="aside">
@@ -55,50 +57,46 @@
 		</div>
 		<div class="main">
 			<div class="header">
-	            <nav class="navbar navbar-custom">
-	                <div class="navbar-header">
-	                    <a href="javascript:;" class="navbar-brand">
-	                        <i class="fa fa-navicon"></i>
-	                    </a>
-	                </div>
-	                <ul class="nav navbar-nav navbar-right">
-	                    <li>
-	                        <a href="javascript:;" class="login_out_bot" id="loginOut">
-	                            <i class="fa fa-sign-out"></i> 退出
-	                        </a>
-	                    </li>
-	                </ul>
-	            </nav>
-	        </div>
-	        <div class="body">
-	        	<table class="table table-bordered" id="userBox">
-	        		
-	        	</table>
-	        </div>
+				<nav class="navbar navbar-custom">
+					<div class="navbar-header">
+						<a href="javascript:;" class="navbar-brand">
+							<i class="fa fa-navicon"></i>
+						</a>
+					</div>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="javascript:;" class="login_out_bot" id="loginOut">
+								<i class="fa fa-sign-out"></i> 退出
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="body">
+				<table class="table table-bordered" id="table-how">
+
+				</table>
+			</div>
 		</div>
 	</div>
-	<script id="userTpl" type="text/html">
+	<script type="text/template" id="tabmit">
 		<tr>
 			<th>用户名</th>
 			<th>电话</th>
 			<th>状态</th>
 			<th>操作</th>
 		</tr>
-		<% for(var i=0;i<data.rows.length;i++){ %>
+	{{each rows}}
 			<tr>
-				<td><%=data.rows[i].username %></td>
-				<td><%=data.rows[i].mobile %></td>
-				<td>已启用</td>
+				<td>{{$value["username"]}}</td>
+				<td>{{$value["mobile"]}}</td>
+				<td>{{$value["isDelete"]?"已启用":"禁用"}}</td>
 				<td>
-					<button 
-					data-id="<%=data.rows[i].id%>"
-					data-isDelete="<%=data.rows[i].isDelete %>"
-					type="button"
-					id="deleteBtn"
-					class="btn <%=data.rows[i].isDelete ? 'btn-danger' : 'btn-success' %>"><%=data.rows[i].isDelete ? '禁用' : '启用' %></button>
+					<button type="button" class="btn {{$value["isDelete"] ? 'btn-danger': 'btn-success'}}" data-id="{{$value["id"]}}" data-delete="{{$value["isDelete"]}}">{{$value["isDelete"]?"禁用":"启用"}}</button>
 				</td>
 			</tr>
-		<% } %>
+	{{/each}}
 	</script>
 </body>
+
 </html>

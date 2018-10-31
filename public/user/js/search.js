@@ -23,6 +23,7 @@ $(function(){
     $(".button").on("click",function(){
         $("#history-box").html("");
         localStorage.removeItem("keyAll");
+        key = [];
     })
 
 })

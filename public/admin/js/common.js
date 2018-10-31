@@ -1,55 +1,24 @@
 $(function(){
 
-
 	$.ajax({
-		url:'/employee/checkRootLogin',
-		type:'get',
-		success:function(result){
-
-			if(result.error && result.error == 400){
-
-				location.href = "login.html";
-
+		type:"get",
+		url:"/employee/checkRootLogin",
+		success:function(res){
+			if(res.error&&res.error==400){
+				location.href="login.html"
 			}
-
 		}
 	})
 
-
-	// 登出
-	$('#loginOut').on('click',function(){
-
+	$('#loginOut').click(function(){
 		$.ajax({
-			type:'get',
-			url:'/employee/employeeLogout',
-			success:function(result){
-				console.log(result)
-				if(result.success){
-					location.href = "login.html";
-				}else{
-					alert('登出失败');
+			type:"get",
+			url:"/employee/employeeLogout",
+			success:function(res){
+				if(res.success){
+					location.href="login.html";
 				}
 			}
-		})
-
-	});
-
-
-
-
-
-
-
-
-
-
-
-	var navLi = $('.navs li')
-
-	navLi.on('click',function(){
-
-		$(this).find('ul').slideToggle();
-
-	});
-
+		});
+	})
 });
